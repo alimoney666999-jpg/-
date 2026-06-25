@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background: linear-gradient(180deg, #f7fbff 0%, #eef4ff 100%);
+  color: #1f2a37;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.topbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  color: #334155;
+}
+
+.nav a:hover {
+  color: #2563eb;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.3;
+  color: #0f172a;
+  margin: 16px 0;
+}
+
+.hero-text p {
+  color: #475569;
+  max-width: 700px;
+  font-size: 1.05rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.hero-actions {
+  margin-top: 28px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: white;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+}
+
+.stats {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stats div {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid #dbeafe;
+  padding: 16px 18px;
+  border-radius: 18px;
+  min-width: 120px;
+}
+
+.stats strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #0f172a;
+}
+
+.stats span {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.hero-card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.hero-card h2 {
+  margin-bottom: 18px;
+  color: #0f172a;
+}
+
+.hero-card form {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-card input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  outline: none;
+  font-family: inherit;
+  background: #f8fafc;
+}
+
+.hero-card input:focus {
+  border-color: #2563eb;
+  background: white;
+}
+
+.hero-card button {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero-card p {
+  margin-top: 14px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.features,
+.course-grid,
+.section,
+.cta {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.feature,
+.course,
+.about,
+.cta {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+}
+
+.feature,
+.course {
+  padding: 22px;
+}
+
+.feature h3,
+.course h3,
+.section h2 {
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.feature p,
+.course p,
+.about p,
+.cta p {
+  color: #475569;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.about {
+  padding: 28px;
+}
+
+.cta {
+  text-align: center;
+  padding: 34px 24px;
+  margin-bottom: 40px;
+}
+
+.cta .btn {
+  margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .features,
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
